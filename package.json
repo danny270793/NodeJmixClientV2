@@ -1,0 +1,52 @@
+{
+    "name": "@danny270793/jmixclientv2",
+    "version": "1.0.0",
+    "description": "jmix rest api client for jmix v2",
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
+    "files": [
+        "build/**/*"
+    ],
+    "scripts": {
+        "install:force": "rm -r -f node_modules && npm install -f",
+        "format": "prettier ./ --write",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "build": "tsc",
+        "build:force": "rm -r -f ./build && tsc",
+        "start": "node --env-file=.env ./build/index.js",
+        "start:watch": "ts-node-dev --respawn --env-file=.env ./src/index.ts",
+        "test": "ts-node-dev --env-file=.env ./tests/index.test.ts",
+        "test:watch": "ts-node-dev --respawn --env-file=.env ./tests/index.test.ts",
+        "documentate": "typedoc --out ./public/docs ./src"
+    },
+    "keywords": [
+        "jmix",
+        "rest-client"
+    ],
+    "author": {
+        "name": "Danny Vaca",
+        "email": "danny270793@gmail.com",
+        "url": "https://danny270793.github.io/#/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danny270793/NodeJmixClientV2"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.7.4",
+        "form-data": "^4.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.0",
+        "@types/node": "^22.4.2",
+        "eslint": "^9.9.0",
+        "globals": "^15.9.0",
+        "prettier": "^3.3.3",
+        "ts-node-dev": "^2.0.0",
+        "typedoc": "^0.26.6",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.2.0"
+    }
+}
