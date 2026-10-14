@@ -3,3 +3,4 @@ build
 public
 logs
 .env
+.DS_Store
